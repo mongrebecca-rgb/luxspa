@@ -3,11 +3,10 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="LUX SPA — Spa et institut de massage détente haut de gamme à Riviera Palmeraie, Abidjan.">
+content="LUX SPA — Votre détente, notre signature. Spa et institut de massage détente haut de gamme à Riviera Palmeraie, Abidjan.">
 
 <title>LUX SPA — Votre détente, notre signature</title>
 
@@ -16,1043 +15,953 @@ content="LUX SPA — Spa et institut de massage détente haut de gamme à Rivier
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+
 <style>
 
 /* =========================================================
-   LUX SPA — LUXURY DESIGN
+   LUX SPA — VERSION LUXURY
 ========================================================= */
 
 :root{
-
---black:#080706;
---black2:#11100e;
---gold:#c9a45d;
---gold2:#efd99b;
---cream:#f8f3ea;
---soft:#bdb5a8;
---line:rgba(239,217,155,.25);
-
+    --black:#080706;
+    --black2:#11100e;
+    --brown:#1a1009;
+    --gold:#c9a45d;
+    --gold-light:#f0d99a;
+    --cream:#f8f2e8;
+    --muted:#b9afa1;
+    --line:rgba(240,217,154,.22);
 }
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-
-background:var(--black);
-color:var(--cream);
-
-font-family:"Montserrat",sans-serif;
-
-font-weight:300;
-
-line-height:1.7;
-
+    background:var(--black);
+    color:var(--cream);
+    font-family:"Montserrat",Arial,sans-serif;
+    font-weight:300;
+    line-height:1.6;
 }
 
 a{
-color:inherit;
-text-decoration:none;
+    color:inherit;
+    text-decoration:none;
 }
 
 img{
-max-width:100%;
-display:block;
+    width:100%;
+    display:block;
 }
 
 .container{
-
-width:min(1200px,90%);
-
-margin:auto;
-
+    width:min(1180px,90%);
+    margin:auto;
 }
+
 
 /* =========================================================
    HEADER
 ========================================================= */
 
-header{
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:82px;
+    z-index:1000;
 
-position:fixed;
+    background:rgba(7,6,5,.68);
+    backdrop-filter:blur(16px);
 
-top:0;
-left:0;
-right:0;
-
-height:78px;
-
-z-index:999;
-
-display:flex;
-
-align-items:center;
-
-background:rgba(5,5,5,.65);
-
-backdrop-filter:blur(16px);
-
-border-bottom:1px solid rgba(255,255,255,.08);
-
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .nav{
+    width:min(1180px,90%);
+    height:100%;
+    margin:auto;
 
-width:min(1200px,90%);
-
-margin:auto;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 .logo{
-
-font-family:"Cormorant Garamond",serif;
-
-font-size:30px;
-
-letter-spacing:6px;
-
-color:var(--gold2);
-
-white-space:nowrap;
-
+    font-family:"Cormorant Garamond",serif;
+    font-size:32px;
+    letter-spacing:6px;
+    color:var(--gold-light);
+    line-height:.8;
 }
 
 .logo small{
+    display:block;
+    text-align:center;
+    margin-top:8px;
 
-display:block;
+    font-family:"Montserrat",sans-serif;
+    font-size:6px;
+    letter-spacing:2.5px;
 
-font-family:"Montserrat",sans-serif;
-
-font-size:6px;
-
-letter-spacing:3px;
-
-text-align:center;
-
-margin-top:-5px;
-
-color:#b9a66f;
-
+    color:#c3a96f;
 }
 
 .menu{
+    display:flex;
+    align-items:center;
+    gap:28px;
 
-display:flex;
-
-align-items:center;
-
-gap:32px;
-
-font-size:10px;
-
-letter-spacing:1.8px;
-
-text-transform:uppercase;
-
+    font-size:10px;
+    letter-spacing:1.6px;
+    text-transform:uppercase;
 }
 
 .menu a{
-
-transition:.3s;
-
+    transition:.3s;
 }
 
 .menu a:hover{
-
-color:var(--gold2);
-
+    color:var(--gold-light);
 }
 
-.nav-btn{
+.reserve-nav{
+    padding:13px 24px;
+    border-radius:30px;
 
-background:linear-gradient(135deg,#a87b32,#f1d99b);
+    background:linear-gradient(
+        135deg,
+        #a87932,
+        #f1d99b,
+        #b88a3c
+    );
 
-color:#18130b;
-
-padding:13px 23px;
-
-border-radius:30px;
-
-font-size:9px;
-
-font-weight:500;
-
-letter-spacing:1.5px;
-
+    color:#17120b !important;
+    font-weight:500;
 }
 
-.mobile-menu{
-
-display:none;
-
-font-size:23px;
-
-}
 
 /* =========================================================
    HERO
 ========================================================= */
 
 .hero{
+    min-height:100vh;
+    position:relative;
 
-min-height:100vh;
+    display:flex;
+    align-items:center;
 
-position:relative;
+    overflow:hidden;
 
-display:flex;
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.88) 0%,
+        rgba(0,0,0,.55) 45%,
+        rgba(0,0,0,.18) 100%
+    ),
+    url("https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=2200&q=90");
 
-align-items:center;
-
-overflow:hidden;
-
-background-image:
-
-linear-gradient(
-90deg,
-rgba(0,0,0,.88) 0%,
-rgba(0,0,0,.55) 45%,
-rgba(0,0,0,.18) 100%
-),
-
-url("https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=2200&q=90");
-
-background-size:cover;
-
-background-position:center;
-
+    background-size:cover;
+    background-position:center;
 }
 
 .hero:after{
+    content:"";
+    position:absolute;
+    inset:0;
 
-content:"";
-
-position:absolute;
-
-inset:0;
-
-background:
-linear-gradient(
-180deg,
-rgba(0,0,0,.15),
-transparent 65%,
-#080706 100%
-);
-
+    background:
+    linear-gradient(
+        transparent 55%,
+        rgba(5,4,3,.92) 100%
+    );
 }
 
 .hero-content{
+    position:relative;
+    z-index:2;
 
-position:relative;
+    width:min(1180px,90%);
+    margin:auto;
 
-z-index:2;
-
-width:min(1200px,90%);
-
-margin:auto;
-
-padding-top:70px;
-
+    padding-top:70px;
 }
 
 .hero-kicker{
+    color:var(--gold-light);
 
-font-size:10px;
+    font-size:9px;
+    letter-spacing:5px;
+    text-transform:uppercase;
 
-letter-spacing:5px;
-
-text-transform:uppercase;
-
-color:var(--gold2);
-
-margin-bottom:22px;
-
+    margin-bottom:22px;
 }
 
 .hero h1{
+    max-width:650px;
 
-font-family:"Cormorant Garamond",serif;
-
-font-weight:400;
-
-font-size:clamp(48px,7vw,86px);
-
-line-height:.92;
-
-max-width:700px;
-
-letter-spacing:1px;
-
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(52px,7vw,88px);
+    line-height:.9;
+    font-weight:400;
 }
 
-.hero h1 span{
-
-color:white;
-
+.hero h1 .gold{
+    color:var(--gold-light);
+    font-style:italic;
 }
 
-.hero h1 em{
+.hero-description{
+    max-width:470px;
 
-font-style:normal;
+    margin-top:25px;
 
-color:var(--gold2);
-
-}
-
-.hero-text{
-
-max-width:480px;
-
-font-size:13px;
-
-color:#ddd5c9;
-
-margin-top:25px;
-
+    color:#ded5c8;
+    font-size:13px;
 }
 
 .hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
 
-display:flex;
-
-gap:14px;
-
-margin-top:32px;
-
-flex-wrap:wrap;
-
+    margin-top:32px;
 }
 
 .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
 
-display:inline-flex;
+    padding:15px 27px;
 
-align-items:center;
+    border:1px solid var(--gold);
 
-justify-content:center;
+    font-size:9px;
+    letter-spacing:1.8px;
+    text-transform:uppercase;
 
-padding:15px 27px;
-
-font-size:9px;
-
-letter-spacing:2px;
-
-text-transform:uppercase;
-
-border:1px solid var(--gold);
-
-transition:.35s;
-
+    transition:.35s;
 }
 
 .btn:hover{
-
-transform:translateY(-3px);
-
+    transform:translateY(-3px);
 }
 
 .btn-gold{
+    border:none;
 
-background:linear-gradient(
-135deg,
-#a97b32,
-#f1da9a,
-#b88c40
-);
+    background:
+    linear-gradient(
+        135deg,
+        #a87932,
+        #f2dc9e,
+        #b7893d
+    );
 
-color:#111;
-
-border:none;
-
+    color:#15110a;
 }
 
-.btn-outline{
-
-background:rgba(0,0,0,.25);
-
+.btn-dark{
+    background:rgba(0,0,0,.25);
 }
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+section{
+    padding:105px 0;
+}
+
+.section-header{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 50px;
+}
+
+.eyebrow{
+    color:var(--gold-light);
+
+    font-size:9px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+}
+
+.section-title{
+    margin-top:10px;
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(40px,5vw,62px);
+    line-height:1;
+    font-weight:400;
+}
+
+.section-title span{
+    color:var(--gold-light);
+}
+
+.gold-line{
+    width:55px;
+    height:1px;
+
+    margin:20px auto;
+
+    background:var(--gold);
+}
+
+.section-description{
+    max-width:620px;
+
+    margin:18px auto 0;
+
+    color:var(--muted);
+    font-size:12px;
+}
+
 
 /* =========================================================
    INTRO
 ========================================================= */
 
-section{
-
-padding:110px 0;
-
+.intro{
+    background:#090806;
 }
-
-.section-head{
-
-text-align:center;
-
-max-width:700px;
-
-margin:0 auto 55px;
-
-}
-
-.eyebrow{
-
-font-size:9px;
-
-letter-spacing:4px;
-
-text-transform:uppercase;
-
-color:var(--gold2);
-
-}
-
-.section-title{
-
-font-family:"Cormorant Garamond",serif;
-
-font-size:clamp(40px,5vw,62px);
-
-font-weight:400;
-
-line-height:1;
-
-margin-top:12px;
-
-}
-
-.section-title span{
-
-color:var(--gold2);
-
-}
-
-.section-text{
-
-color:var(--soft);
-
-font-size:13px;
-
-max-width:600px;
-
-margin:20px auto 0;
-
-}
-
-.gold-line{
-
-width:55px;
-
-height:1px;
-
-background:var(--gold);
-
-margin:22px auto;
-
-}
-
-/* =========================================================
-   INTRO IMAGE
-========================================================= */
 
 .intro-grid{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:70px;
-
-align-items:center;
-
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:65px;
+    align-items:center;
 }
 
 .intro-image{
+    min-height:510px;
 
-height:520px;
+    background:
+    linear-gradient(
+        rgba(0,0,0,.05),
+        rgba(0,0,0,.15)
+    ),
+    url("https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1300&q=90");
 
-background:
-
-linear-gradient(
-rgba(0,0,0,.05),
-rgba(0,0,0,.15)
-),
-
-url("https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=90");
-
-background-size:cover;
-
-background-position:center;
-
+    background-size:cover;
+    background-position:center;
 }
 
-.intro-copy{
-
-padding-right:20px;
-
+.intro-copy .eyebrow{
+    text-align:left;
 }
 
-.intro-copy h3{
+.intro-copy h2{
+    margin:15px 0 22px;
 
-font-family:"Cormorant Garamond",serif;
+    font-family:"Cormorant Garamond",serif;
+    font-size:52px;
+    line-height:.95;
+    font-weight:400;
+}
 
-font-size:42px;
-
-font-weight:400;
-
-line-height:1;
-
-margin:18px 0;
-
+.intro-copy h2 span{
+    color:var(--gold-light);
 }
 
 .intro-copy p{
+    max-width:520px;
 
-font-size:13px;
-
-color:var(--soft);
-
-max-width:520px;
-
+    color:var(--muted);
+    font-size:13px;
 }
 
 .signature{
+    margin-top:25px;
 
-margin-top:28px;
+    font-family:"Cormorant Garamond",serif;
+    font-size:25px;
 
-color:var(--gold2);
-
-font-family:"Cormorant Garamond",serif;
-
-font-size:24px;
-
+    color:var(--gold-light);
 }
 
+
 /* =========================================================
-   SERVICES
+   SOINS
 ========================================================= */
 
 .services-section{
-
-background:#0c0b09;
-
+    background:#0b0a08;
 }
+
+.services-intro{
+    text-align:center;
+    margin-bottom:42px;
+}
+
+.services-intro p{
+    color:var(--muted);
+    font-size:12px;
+}
+
+
+/* Grille des prestations */
 
 .services-grid{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:repeat(3,1fr);
+    grid-template-columns:
+    repeat(3,1fr);
 
-gap:18px;
-
-}
-
-.service{
-
-position:relative;
-
-height:350px;
-
-overflow:hidden;
-
-border:1px solid rgba(239,217,155,.15);
+    gap:16px;
 
 }
 
-.service img{
 
-width:100%;
+/* Carte prestation */
 
-height:100%;
+.service-card{
 
-object-fit:cover;
+    position:relative;
 
-transition:.7s;
+    height:340px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(240,217,154,.18);
+
+    background:#11100e;
+
+    transition:.4s;
+}
+
+.service-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:rgba(240,217,154,.55);
 
 }
 
-.service:hover img{
+.service-card img{
 
-transform:scale(1.06);
+    width:100%;
+    height:100%;
 
-}
+    object-fit:cover;
 
-.service:after{
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-background:
-linear-gradient(
-transparent 35%,
-rgba(0,0,0,.9) 100%
-);
+    transition:.7s;
 
 }
 
-.service-content{
+.service-card:hover img{
 
-position:absolute;
+    transform:scale(1.06);
 
-bottom:0;
+}
 
-left:0;
+.service-card:after{
 
-right:0;
+    content:"";
 
-z-index:2;
+    position:absolute;
+    inset:0;
 
-padding:25px;
+    background:
+    linear-gradient(
+        transparent 25%,
+        rgba(0,0,0,.88) 100%
+    );
 
+}
+
+.service-info{
+
+    position:absolute;
+
+    z-index:2;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:23px;
 }
 
 .service-number{
 
-color:var(--gold2);
+    color:var(--gold-light);
 
-font-size:9px;
-
-letter-spacing:2px;
-
+    font-size:8px;
+    letter-spacing:2px;
+    text-transform:uppercase;
 }
 
-.service h3{
+.service-info h3{
 
-font-family:"Cormorant Garamond",serif;
+    margin-top:5px;
 
-font-size:30px;
+    font-family:"Cormorant Garamond",serif;
+    font-size:29px;
+    line-height:1;
 
-font-weight:400;
-
-margin-top:4px;
-
+    font-weight:400;
 }
 
 .service-price{
 
-color:var(--gold2);
+    margin-top:9px;
 
-font-size:12px;
+    font-family:"Cormorant Garamond",serif;
+    font-size:25px;
 
-margin-top:5px;
-
+    color:var(--gold-light);
 }
+
 
 /* =========================================================
-   WHY LUX
+   AUTRES PRESTATIONS
 ========================================================= */
 
-.why{
+.other-services{
 
-background:
+    margin-top:25px;
 
-linear-gradient(
-90deg,
-rgba(255,255,255,.97),
-rgba(242,237,228,.98)
-);
+    padding:27px;
 
-color:#171512;
+    text-align:center;
+
+    border:1px solid var(--line);
+
+    background:
+    linear-gradient(
+        120deg,
+        rgba(201,164,93,.08),
+        rgba(0,0,0,.2)
+    );
+}
+
+.other-services strong{
+
+    display:block;
+
+    margin-bottom:7px;
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:25px;
+    font-weight:400;
+
+    color:var(--gold-light);
+}
+
+.other-services p{
+
+    max-width:600px;
+
+    margin:0 auto 15px;
+
+    color:#bdb4a7;
+
+    font-size:11px;
+}
+
+.whatsapp-link{
+
+    color:var(--gold-light);
+
+    font-size:9px;
+    letter-spacing:1.7px;
+
+    text-transform:uppercase;
 
 }
 
-.why-grid{
 
-display:grid;
+/* =========================================================
+   UNIVERS
+========================================================= */
 
-grid-template-columns:1fr 1fr;
+.universe{
 
-align-items:center;
+    padding:0;
 
-gap:60px;
+    display:grid;
 
+    grid-template-columns:1.25fr .75fr;
+
+    min-height:530px;
+
+    background:#120c07;
 }
 
-.why-image{
+.universe-image{
 
-height:480px;
+    min-height:530px;
 
-background-image:
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.05),
+        rgba(0,0,0,.2)
+    ),
+    url("https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1500&q=90");
 
-url("https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1200&q=90");
-
-background-size:cover;
-
-background-position:center;
-
+    background-size:cover;
+    background-position:center;
 }
 
-.why-content{
+.universe-content{
 
-padding:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 
+    padding:70px;
+
+    background:
+    radial-gradient(
+        circle at 20% 40%,
+        rgba(201,164,93,.12),
+        transparent 45%
+    ),
+    #110b07;
 }
 
-.why-content .eyebrow{
+.universe-content h2{
 
-color:#92702f;
+    margin:14px 0 20px;
 
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:55px;
+
+    line-height:.92;
+
+    font-weight:400;
 }
 
-.why-content h2{
-
-font-family:"Cormorant Garamond",serif;
-
-font-size:56px;
-
-font-weight:400;
-
-line-height:1;
-
-margin:15px 0 35px;
-
+.universe-content h2 span{
+    color:var(--gold-light);
 }
 
-.advantages{
+.universe-content p{
 
-display:grid;
+    max-width:420px;
 
-grid-template-columns:1fr 1fr;
+    color:var(--muted);
 
-gap:30px;
+    font-size:12px;
 
+    margin-bottom:25px;
 }
 
-.advantage{
-
-border-top:1px solid rgba(150,110,40,.3);
-
-padding-top:18px;
-
-}
-
-.advantage span{
-
-display:block;
-
-color:#b1843c;
-
-font-size:23px;
-
-margin-bottom:7px;
-
-}
-
-.advantage h4{
-
-font-family:"Cormorant Garamond",serif;
-
-font-size:25px;
-
-font-weight:500;
-
-}
-
-.advantage p{
-
-font-size:11px;
-
-color:#686159;
-
-margin-top:4px;
-
-}
 
 /* =========================================================
    PACKS
 ========================================================= */
 
+.packs-section{
+    background:#090806;
+}
+
 .packs{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr 1fr;
 
-gap:22px;
+    gap:18px;
 
 }
 
 .pack{
 
-padding:45px;
+    min-height:340px;
 
-border:1px solid var(--line);
+    padding:38px;
 
-background:
+    border:1px solid var(--line);
 
-linear-gradient(
-145deg,
-#17130e,
-#090807
-);
+    background:
+    linear-gradient(
+        145deg,
+        #17120d,
+        #080706
+    );
 
 }
 
 .pack.featured{
 
-background:
+    border-color:rgba(240,217,154,.55);
 
-linear-gradient(
-145deg,
-#21190d,
-#0b0906
-);
-
-border-color:rgba(239,217,155,.55);
+    background:
+    linear-gradient(
+        145deg,
+        #21170b,
+        #090705
+    );
 
 }
 
 .pack-label{
 
-font-size:9px;
+    color:var(--gold-light);
 
-letter-spacing:4px;
-
-color:var(--gold2);
+    font-size:8px;
+    letter-spacing:4px;
 
 }
 
 .pack h3{
 
-font-family:"Cormorant Garamond",serif;
+    margin:10px 0 5px;
 
-font-size:43px;
+    font-family:"Cormorant Garamond",serif;
 
-font-weight:400;
+    font-size:42px;
 
-margin:10px 0;
+    font-weight:400;
 
 }
 
 .pack-price{
 
-font-family:"Cormorant Garamond",serif;
+    font-family:"Cormorant Garamond",serif;
 
-font-size:28px;
+    font-size:27px;
 
-color:var(--gold2);
+    color:var(--gold-light);
 
 }
 
 .pack ul{
 
-list-style:none;
+    list-style:none;
 
-margin:25px 0;
+    margin:20px 0 25px;
 
-color:#c8c0b4;
+    color:#c5bcaf;
 
-font-size:12px;
+    font-size:11px;
 
 }
 
 .pack li{
 
-padding:9px 0;
+    padding:7px 0;
 
-border-bottom:1px solid rgba(255,255,255,.07);
+    border-bottom:1px solid rgba(255,255,255,.07);
 
 }
 
+
 /* =========================================================
-   GALLERY
+   GALERIE
 ========================================================= */
 
-.gallery{
+.gallery-section{
 
-background:#0b0a08;
+    background:#0b0a08;
 
 }
 
 .gallery-grid{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:2fr 1fr 1fr;
+    grid-template-columns:2fr 1fr 1fr;
 
-grid-template-rows:250px 250px;
+    grid-template-rows:250px 250px;
 
-gap:12px;
+    gap:12px;
 
 }
 
 .gallery-item{
 
-overflow:hidden;
+    overflow:hidden;
 
 }
 
 .gallery-item:first-child{
 
-grid-row:span 2;
+    grid-row:span 2;
 
 }
 
 .gallery-item img{
 
-width:100%;
+    width:100%;
+    height:100%;
 
-height:100%;
+    object-fit:cover;
 
-object-fit:cover;
-
-transition:.6s;
+    transition:.7s;
 
 }
 
 .gallery-item:hover img{
 
-transform:scale(1.04);
+    transform:scale(1.05);
 
 }
 
+
 /* =========================================================
-   GIFT / CTA
+   CADEAU
 ========================================================= */
 
 .gift{
 
-text-align:center;
+    text-align:center;
 
-background:
+    background:
 
-radial-gradient(
-circle at center,
-rgba(201,164,91,.18),
-transparent 42%
-),
+    radial-gradient(
+        circle at center,
+        rgba(201,164,93,.18),
+        transparent 43%
+    ),
 
-#080706;
+    #080706;
 
 }
 
 .gift h2{
 
-font-family:"Cormorant Garamond",serif;
+    font-family:"Cormorant Garamond",serif;
 
-font-size:clamp(45px,6vw,72px);
+    font-size:clamp(45px,6vw,70px);
 
-font-weight:400;
+    line-height:.95;
 
-line-height:1;
+    font-weight:400;
 
 }
 
 .gift h2 span{
 
-color:var(--gold2);
+    color:var(--gold-light);
 
 }
 
 .gift p{
 
-max-width:540px;
+    max-width:560px;
 
-margin:22px auto 30px;
+    margin:22px auto 28px;
 
-color:var(--soft);
+    color:var(--muted);
 
-font-size:13px;
+    font-size:12px;
 
 }
+
 
 /* =========================================================
    RESERVATION
 ========================================================= */
 
+.reservation{
+
+    background:#090806;
+
+}
+
 .booking{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:.8fr 1.2fr;
+    grid-template-columns:.75fr 1.25fr;
 
-gap:70px;
-
-}
-
-.contact h2{
-
-font-family:"Cormorant Garamond",serif;
-
-font-size:55px;
-
-font-weight:400;
-
-line-height:.95;
-
-margin:15px 0 25px;
+    gap:70px;
 
 }
 
-.contact h2 span{
+.contact-title{
 
-color:var(--gold2);
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:55px;
+
+    line-height:.95;
+
+    font-weight:400;
+
+    margin:15px 0 20px;
 
 }
 
-.contact p{
+.contact-title span{
 
-font-size:13px;
+    color:var(--gold-light);
 
-color:var(--soft);
+}
+
+.contact-text{
+
+    max-width:440px;
+
+    color:var(--muted);
+
+    font-size:12px;
 
 }
 
 .contact-details{
 
-margin-top:30px;
+    margin-top:28px;
 
 }
 
-.detail{
+.contact-detail{
 
-margin:20px 0;
-
-}
-
-.detail strong{
-
-display:block;
-
-font-size:9px;
-
-letter-spacing:2px;
-
-color:var(--gold2);
-
-margin-bottom:4px;
+    margin:17px 0;
 
 }
 
-.detail span{
+.contact-detail strong{
 
-font-size:12px;
+    display:block;
 
-color:#c6bdb0;
+    margin-bottom:3px;
+
+    color:var(--gold-light);
+
+    font-size:8px;
+
+    letter-spacing:2px;
 
 }
+
+.contact-detail span{
+
+    color:#c8bfb2;
+
+    font-size:11px;
+
+}
+
+
+/* FORMULAIRE */
 
 form{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr 1fr;
 
-gap:14px;
+    gap:13px;
 
 }
 
@@ -1060,21 +969,21 @@ input,
 select,
 textarea{
 
-width:100%;
+    width:100%;
 
-background:#0d0c0a;
+    padding:15px;
 
-border:1px solid rgba(239,217,155,.22);
+    background:#0d0c0a;
 
-color:white;
+    border:1px solid rgba(240,217,154,.22);
 
-padding:15px;
+    color:white;
 
-font-family:"Montserrat",sans-serif;
+    font-family:"Montserrat",sans-serif;
 
-font-size:11px;
+    font-size:10px;
 
-outline:none;
+    outline:none;
 
 }
 
@@ -1082,33 +991,34 @@ input:focus,
 select:focus,
 textarea:focus{
 
-border-color:var(--gold);
+    border-color:var(--gold);
 
 }
 
 textarea{
 
-min-height:130px;
+    min-height:125px;
 
-resize:vertical;
+    resize:vertical;
 
-grid-column:1/-1;
+    grid-column:1/-1;
 
 }
 
 .full{
 
-grid-column:1/-1;
+    grid-column:1/-1;
 
 }
 
 button{
 
-cursor:pointer;
+    font-family:"Montserrat",sans-serif;
 
-font-family:"Montserrat",sans-serif;
+    cursor:pointer;
 
 }
+
 
 /* =========================================================
    FOOTER
@@ -1116,39 +1026,68 @@ font-family:"Montserrat",sans-serif;
 
 footer{
 
-border-top:1px solid var(--line);
+    padding:48px 5%;
 
-padding:45px 5%;
+    border-top:1px solid var(--line);
 
-display:flex;
+    display:grid;
 
-justify-content:space-between;
+    grid-template-columns:1fr 1fr 1fr;
 
-gap:30px;
+    gap:30px;
 
-flex-wrap:wrap;
-
-}
-
-footer p{
-
-font-size:10px;
-
-color:#8f887e;
+    align-items:center;
 
 }
 
 .footer-logo{
 
-font-family:"Cormorant Garamond",serif;
+    font-family:"Cormorant Garamond",serif;
 
-font-size:28px;
+    font-size:29px;
 
-letter-spacing:5px;
+    letter-spacing:5px;
 
-color:var(--gold2);
+    color:var(--gold-light);
 
 }
+
+.footer-text{
+
+    color:#8f887e;
+
+    font-size:9px;
+
+    line-height:1.8;
+
+}
+
+.footer-address{
+
+    text-align:right;
+
+    color:#aaa296;
+
+    font-size:9px;
+
+    line-height:1.8;
+
+}
+
+.footer-address strong{
+
+    display:block;
+
+    margin-bottom:3px;
+
+    color:var(--gold-light);
+
+    font-size:8px;
+
+    letter-spacing:1.5px;
+
+}
+
 
 /* =========================================================
    WHATSAPP
@@ -1156,33 +1095,34 @@ color:var(--gold2);
 
 .whatsapp{
 
-position:fixed;
+    position:fixed;
 
-right:20px;
+    right:20px;
+    bottom:20px;
 
-bottom:20px;
+    z-index:2000;
 
-z-index:1000;
+    padding:14px 19px;
 
-padding:14px 20px;
+    background:
+    linear-gradient(
+        135deg,
+        #a87932,
+        #f0d99a
+    );
 
-background:linear-gradient(
-135deg,
-#a77b32,
-#f0d898
-);
+    color:#111;
 
-color:#111;
+    font-size:9px;
 
-font-size:9px;
+    letter-spacing:1.5px;
 
-letter-spacing:1.5px;
+    text-transform:uppercase;
 
-text-transform:uppercase;
-
-box-shadow:0 10px 30px rgba(0,0,0,.45);
+    box-shadow:0 12px 35px rgba(0,0,0,.5);
 
 }
+
 
 /* =========================================================
    MOBILE
@@ -1190,168 +1130,164 @@ box-shadow:0 10px 30px rgba(0,0,0,.45);
 
 @media(max-width:850px){
 
-header{
+    .header{
+        height:70px;
+    }
 
-height:68px;
+    .logo{
+        font-size:25px;
+    }
 
-}
+    .menu{
+        display:none;
+    }
 
-.logo{
+    .hero{
+        min-height:92vh;
 
-font-size:25px;
+        background-position:center;
+    }
 
-}
+    .hero-content{
+        padding-top:75px;
+    }
 
-.menu{
+    .hero h1{
+        font-size:52px;
+    }
 
-display:none;
+    .hero-description{
+        font-size:11px;
+        max-width:340px;
+    }
 
-}
+    section{
+        padding:75px 0;
+    }
 
-.mobile-menu{
+    .intro-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
 
-display:block;
+    .intro-image{
+        min-height:350px;
+    }
 
-}
+    .intro-copy h2{
+        font-size:45px;
+    }
 
-.hero{
+    .services-grid{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
 
-min-height:92vh;
+    .service-card{
+        height:285px;
+    }
 
-background-position:center;
+    .service-info{
+        padding:17px;
+    }
 
-}
+    .service-info h3{
+        font-size:24px;
+    }
 
-.hero-content{
+    .service-price{
+        font-size:21px;
+    }
 
-padding-top:80px;
+    .universe{
+        grid-template-columns:1fr;
+    }
 
-}
+    .universe-image{
+        min-height:350px;
+    }
 
-.hero h1{
+    .universe-content{
+        padding:55px 8%;
+    }
 
-font-size:54px;
+    .universe-content h2{
+        font-size:45px;
+    }
 
-}
+    .packs{
+        grid-template-columns:1fr;
+    }
 
-.hero-text{
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:190px 190px 190px;
+    }
 
-font-size:12px;
+    .gallery-item:first-child{
+        grid-column:span 2;
+        grid-row:span 1;
+    }
 
-max-width:360px;
+    .booking{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
 
-}
+    form{
+        grid-template-columns:1fr;
+    }
 
-section{
+    .full{
+        grid-column:1;
+    }
 
-padding:80px 0;
+    footer{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
 
-}
+    .footer-address{
+        text-align:center;
+    }
 
-.intro-grid,
-.why-grid,
-.booking{
-
-grid-template-columns:1fr;
-
-gap:40px;
-
-}
-
-.intro-image,
-.why-image{
-
-height:360px;
-
-}
-
-.services-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.service{
-
-height:330px;
-
-}
-
-.packs{
-
-grid-template-columns:1fr;
-
-}
-
-.pack{
-
-padding:35px 25px;
-
-}
-
-.gallery-grid{
-
-grid-template-columns:1fr 1fr;
-
-grid-template-rows:200px 200px 200px;
-
-}
-
-.gallery-item:first-child{
-
-grid-row:span 1;
-
-grid-column:span 2;
-
-}
-
-.gallery-item{
-
-height:200px;
-
-}
-
-.why-content h2{
-
-font-size:45px;
-
-}
-
-.advantages{
-
-gap:20px;
+    .whatsapp{
+        right:10px;
+        bottom:10px;
+        padding:12px 15px;
+    }
 
 }
 
-form{
+@media(max-width:520px){
 
-grid-template-columns:1fr;
+    .services-grid{
+        grid-template-columns:1fr;
+    }
 
-}
+    .service-card{
+        height:310px;
+    }
 
-.full{
+    .hero h1{
+        font-size:48px;
+    }
 
-grid-column:1;
+    .gallery-grid{
+        grid-template-columns:1fr;
+        grid-template-rows:220px 220px 220px 220px;
+    }
 
-}
-
-.contact h2{
-
-font-size:45px;
-
-}
-
-.whatsapp{
-
-right:12px;
-
-bottom:12px;
-
-padding:12px 15px;
+    .gallery-item:first-child{
+        grid-column:span 1;
+    }
 
 }
 
-}
+
+/* =========================================================
+   FIN
+========================================================= */
 
 </style>
 
@@ -1362,14 +1298,14 @@ padding:12px 15px;
 
 
 <!-- =====================================================
-HEADER
+     HEADER
 ===================================================== -->
 
-<header>
+<header class="header">
 
 <div class="nav">
 
-<a href="#" class="logo">
+<a href="#accueil" class="logo">
 
 LUX SPA
 
@@ -1402,20 +1338,15 @@ Galerie
 Carte cadeau
 </a>
 
-<a href="#contact">
+<a href="#reservation">
 Contact
 </a>
 
-<a href="#reservation" class="nav-btn">
+<a href="#reservation" class="reserve-nav">
 Réserver
 </a>
 
 </nav>
-
-
-<div class="mobile-menu">
-☰
-</div>
 
 </div>
 
@@ -1423,7 +1354,7 @@ Réserver
 
 
 <!-- =====================================================
-HERO
+     HERO
 ===================================================== -->
 
 <section class="hero" id="accueil">
@@ -1431,24 +1362,20 @@ HERO
 <div class="hero-content">
 
 <div class="hero-kicker">
-RIVIERA PALMERAIE · ABIDJAN
+UN MOMENT RIEN QUE POUR VOUS
 </div>
 
 <h1>
 
-Un moment rien que pour vous.<br>
+Détente<br>
 
-<span>
-Détente,
-</span>
-
-<em>
+<span class="gold">
 Beauté & Harmonie
-</em>
+</span>
 
 </h1>
 
-<p class="hero-text">
+<p class="hero-description">
 
 Des soins de détente et de beauté dans un univers
 élégant et chaleureux, pensé pour vous offrir
@@ -1463,8 +1390,8 @@ un véritable moment pour vous.
 Découvrir nos soins
 </a>
 
-<a href="#reservation" class="btn btn-outline">
-Réserver
+<a href="#reservation" class="btn btn-dark">
+Réserver mon moment
 </a>
 
 </div>
@@ -1475,10 +1402,10 @@ Réserver
 
 
 <!-- =====================================================
-INTRO
+     INTRODUCTION
 ===================================================== -->
 
-<section id="apropos">
+<section class="intro" id="apropos">
 
 <div class="container">
 
@@ -1491,30 +1418,40 @@ INTRO
 <div class="intro-copy">
 
 <div class="eyebrow">
-L'expérience LUX SPA
+L'UNIVERS LUX SPA
 </div>
 
-<h3>
+<h2>
+
 L'art de prendre
 <br>
-soin de soi.
-</h3>
 
-<div class="gold-line" style="margin-left:0"></div>
+<span>
+soin de soi.
+</span>
+
+</h2>
+
+<div
+class="gold-line"
+style="margin-left:0">
+</div>
 
 <p>
 
-Bienvenue chez LUX SPA, votre espace de détente
-et de beauté à Riviera Palmeraie.
+Bienvenue chez LUX SPA, votre espace de massage
+détente et de beauté à Riviera Palmeraie.
 
-Nous vous accueillons dans une atmosphère élégante
-et chaleureuse pour vous permettre de profiter
-pleinement de votre moment.
+Découvrez un univers élégant et chaleureux où
+chaque prestation devient une invitation à ralentir,
+prendre soin de soi et profiter pleinement du moment.
 
 </p>
 
 <div class="signature">
+
 Votre détente, notre signature.
+
 </div>
 
 </div>
@@ -1527,25 +1464,35 @@ Votre détente, notre signature.
 
 
 <!-- =====================================================
-SERVICES
+     NOS SOINS
 ===================================================== -->
 
 <section class="services-section" id="soins">
 
 <div class="container">
 
-<div class="section-head">
+
+<div class="section-header">
 
 <div class="eyebrow">
-Nos soins
+NOS SOINS
 </div>
 
 <h2 class="section-title">
+
 Des expériences uniques pour
 <span>votre bien-être</span>
+
 </h2>
 
 <div class="gold-line"></div>
+
+<p class="section-description">
+
+Découvrez notre sélection de prestations,
+présentées du tarif le plus accessible au plus élevé.
+
+</p>
 
 </div>
 
@@ -1553,141 +1500,23 @@ Des expériences uniques pour
 <div class="services-grid">
 
 
-<!-- 01 -->
-
-<div class="service">
-
-<img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=85">
-
-<div class="service-content">
-
-<div class="service-number">
-01 · MASSAGE
-</div>
-
-<h3>
-Massage relaxant
-</h3>
-
-<div class="service-price">
-15 000 FCFA
-</div>
-
-</div>
-
-</div>
+<!-- =================================================
+     10 000 FCFA
+================================================= -->
 
 
-<!-- 02 -->
+<!-- PEDICURE -->
 
-<div class="service">
+<div class="service-card">
 
-<img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=85">
+<img
+src="https://images.unsplash.com/photo-1519014816548-bf5f4d8a4a4e?auto=format&fit=crop&w=900&q=90"
+alt="Soin de pédicure">
 
-<div class="service-content">
+<div class="service-info">
 
 <div class="service-number">
-02 · BEAUTÉ
-</div>
-
-<h3>
-Soin du visage
-</h3>
-
-<div class="service-price">
-10 000 FCFA
-</div>
-
-</div>
-
-</div>
-
-
-<!-- 03 -->
-
-<div class="service">
-
-<img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=900&q=85">
-
-<div class="service-content">
-
-<div class="service-number">
-03 · DÉTENTE
-</div>
-
-<h3>
-Pierres chaudes
-</h3>
-
-<div class="service-price">
-25 000 FCFA
-</div>
-
-</div>
-
-</div>
-
-
-<!-- 04 -->
-
-<div class="service">
-
-<img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=900&q=85">
-
-<div class="service-content">
-
-<div class="service-number">
-04 · BEAUTÉ
-</div>
-
-<h3>
-Soin du corps
-</h3>
-
-<div class="service-price">
-10 000 FCFA
-</div>
-
-</div>
-
-</div>
-
-
-<!-- 05 -->
-
-<div class="service">
-
-<img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=900&q=85">
-
-<div class="service-content">
-
-<div class="service-number">
-05 · RELAXATION
-</div>
-
-<h3>
-Massage hydratant
-</h3>
-
-<div class="service-price">
-25 000 FCFA
-</div>
-
-</div>
-
-</div>
-
-
-<!-- 06 -->
-
-<div class="service">
-
-<img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=85">
-
-<div class="service-content">
-
-<div class="service-number">
-06 · BEAUTÉ
+01 · BEAUTÉ DES PIEDS
 </div>
 
 <h3>
@@ -1703,7 +1532,252 @@ Pédicure + Wax complet
 </div>
 
 
+<!-- VISAGE -->
+
+<div class="service-card">
+
+<img
+src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=90"
+alt="Soin du visage">
+
+<div class="service-info">
+
+<div class="service-number">
+02 · SOIN BEAUTÉ
 </div>
+
+<h3>
+Soin du visage
+</h3>
+
+<div class="service-price">
+10 000 FCFA
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CORPS -->
+
+<div class="service-card">
+
+<img
+src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=900&q=90"
+alt="Soin du corps">
+
+<div class="service-info">
+
+<div class="service-number">
+03 · SOIN BEAUTÉ
+</div>
+
+<h3>
+Soin du corps
+</h3>
+
+<div class="service-price">
+10 000 FCFA
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =================================================
+     15 000 FCFA
+================================================= -->
+
+<div class="service-card">
+
+<img
+src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=90"
+alt="Massage relaxant">
+
+<div class="service-info">
+
+<div class="service-number">
+04 · MASSAGE
+</div>
+
+<h3>
+Massage relaxant
+</h3>
+
+<div class="service-price">
+15 000 FCFA
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =================================================
+     25 000 FCFA
+================================================= -->
+
+
+<div class="service-card">
+
+<img
+src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=900&q=90"
+alt="Massage tonifiant">
+
+<div class="service-info">
+
+<div class="service-number">
+05 · MASSAGE
+</div>
+
+<h3>
+Massage tonifiant
+</h3>
+
+<div class="service-price">
+25 000 FCFA
+</div>
+
+</div>
+
+</div>
+
+
+<div class="service-card">
+
+<img
+src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=900&q=90"
+alt="Massage avec serviette chaude">
+
+<div class="service-info">
+
+<div class="service-number">
+06 · MASSAGE
+</div>
+
+<h3>
+Serviette chaude
+</h3>
+
+<div class="service-price">
+25 000 FCFA
+</div>
+
+</div>
+
+</div>
+
+
+<div class="service-card">
+
+<img
+src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=900&q=90"
+alt="Massage aux pierres chaudes">
+
+<div class="service-info">
+
+<div class="service-number">
+07 · MASSAGE
+</div>
+
+<h3>
+Pierres chaudes
+</h3>
+
+<div class="service-price">
+25 000 FCFA
+</div>
+
+</div>
+
+</div>
+
+
+<div class="service-card">
+
+<img
+src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=900&q=90"
+alt="Massage éclaircissant">
+
+<div class="service-info">
+
+<div class="service-number">
+08 · MASSAGE
+</div>
+
+<h3>
+Massage éclaircissant
+</h3>
+
+<div class="service-price">
+25 000 FCFA
+</div>
+
+</div>
+
+</div>
+
+
+<div class="service-card">
+
+<img
+src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=90"
+alt="Massage hydratant">
+
+<div class="service-info">
+
+<div class="service-number">
+09 · MASSAGE
+</div>
+
+<h3>
+Massage hydratant
+</h3>
+
+<div class="service-price">
+25 000 FCFA
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<!-- AUTRES PRESTATIONS -->
+
+<div class="other-services">
+
+<strong>
+D'autres prestations sont également disponibles
+</strong>
+
+<p>
+
+La carte LUX SPA comprend d'autres prestations
+qui ne sont pas toutes présentées sur le site.
+
+Contactez-nous directement sur WhatsApp pour
+découvrir notre carte complète et obtenir les informations
+sur les prestations disponibles.
+
+</p>
+
+<a
+href="https://wa.me/2250709334542"
+target="_blank"
+class="whatsapp-link">
+
+Découvrir la carte complète sur WhatsApp →
+
+</a>
+
+</div>
+
 
 </div>
 
@@ -1711,100 +1785,44 @@ Pédicure + Wax complet
 
 
 <!-- =====================================================
-POURQUOI LUX SPA
+     UNIVERS LUX SPA
 ===================================================== -->
 
-<section class="why">
+<section class="universe">
 
-<div class="container">
-
-<div class="why-grid">
+<div class="universe-image"></div>
 
 
-<div class="why-image"></div>
-
-
-<div class="why-content">
+<div class="universe-content">
 
 <div class="eyebrow">
-L'univers LUX SPA
+L'UNIVERS LUX SPA
 </div>
 
 <h2>
-Pourquoi choisir
+
+Une parenthèse
 <br>
-LUX SPA ?
+
+<span>
+rien qu'à vous.
+</span>
+
 </h2>
 
-
-<div class="advantages">
-
-
-<div class="advantage">
-
-<span>✦</span>
-
-<h4>
-Cadre élégant
-</h4>
-
 <p>
-Un univers pensé pour votre détente.
+
+Prenez le temps de ralentir, de vous détendre
+et de profiter d'un moment entièrement consacré
+à votre bien-être.
+
 </p>
 
-</div>
+<a href="#galerie" class="btn btn-gold">
 
+Découvrir notre univers
 
-<div class="advantage">
-
-<span>◇</span>
-
-<h4>
-Soins variés
-</h4>
-
-<p>
-Massages et prestations beauté.
-</p>
-
-</div>
-
-
-<div class="advantage">
-
-<span>✧</span>
-
-<h4>
-Moments sur mesure
-</h4>
-
-<p>
-Choisissez l'expérience qui vous correspond.
-</p>
-
-</div>
-
-
-<div class="advantage">
-
-<span>♡</span>
-
-<h4>
-Bien-être
-</h4>
-
-<p>
-Un moment pour ralentir et prendre soin de vous.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</div>
+</a>
 
 </div>
 
@@ -1812,22 +1830,25 @@ Un moment pour ralentir et prendre soin de vous.
 
 
 <!-- =====================================================
-PACKS
+     PACKS
 ===================================================== -->
 
-<section>
+<section class="packs-section">
 
 <div class="container">
 
-<div class="section-head">
+
+<div class="section-header">
 
 <div class="eyebrow">
-Expériences signature
+LES RITUELS LUX
 </div>
 
 <h2 class="section-title">
-Les rituels
-<span>LUX</span>
+
+Des soins complets pour une expérience
+<span>encore plus unique</span>
+
 </h2>
 
 <div class="gold-line"></div>
@@ -1837,6 +1858,8 @@ Les rituels
 
 <div class="packs">
 
+
+<!-- PACK SIMPLE -->
 
 <div class="pack">
 
@@ -1854,22 +1877,36 @@ Pack Soin Simple
 
 <ul>
 
-<li>✓ Soin du visage</li>
+<li>
+✓ Soin du visage
+</li>
 
-<li>✓ Soin du corps</li>
+<li>
+✓ Soin du corps
+</li>
 
-<li>✓ Pédicure</li>
+<li>
+✓ Pédicure
+</li>
 
-<li>✓ Massage relaxant</li>
+<li>
+✓ Massage relaxant
+</li>
 
 </ul>
 
-<a href="#reservation" class="btn">
+<a
+href="#reservation"
+class="btn">
+
 Choisir ce pack
+
 </a>
 
 </div>
 
+
+<!-- PACK CAVIAR -->
 
 <div class="pack featured">
 
@@ -1887,46 +1924,40 @@ Pack Soin Caviar
 
 <ul>
 
-<li>✓ Soin du visage</li>
+<li>
+✓ Soin du visage
+</li>
 
-<li>✓ Soin du corps</li>
+<li>
+✓ Soin du corps
+</li>
 
-<li>✓ Pédicure complète</li>
+<li>
+✓ Pédicure complète
+</li>
 
-<li>✓ Soin intégral</li>
+<li>
+✓ Soin intégral
+</li>
 
-<li>✓ Massage au choix</li>
+<li>
+✓ Massage au choix
+</li>
 
 </ul>
 
-<a href="#reservation" class="btn btn-gold">
-Choisir ce pack
-</a>
-
-</div>
-
-
-</div>
-
-
-<p style="
-text-align:center;
-margin-top:35px;
-font-size:11px;
-color:#aaa296;
-">
-
-D'autres prestations sont disponibles sur demande.
 <a
-href="https://wa.me/2250709334542"
-target="_blank"
-style="color:#efd99b;">
+href="#reservation"
+class="btn btn-gold">
 
-Contactez-nous sur WhatsApp.
+Choisir ce pack
 
 </a>
 
-</p>
+</div>
+
+
+</div>
 
 </div>
 
@@ -1934,22 +1965,25 @@ Contactez-nous sur WhatsApp.
 
 
 <!-- =====================================================
-GALERIE
+     GALERIE
 ===================================================== -->
 
-<section class="gallery" id="galerie">
+<section class="gallery-section" id="galerie">
 
 <div class="container">
 
-<div class="section-head">
+
+<div class="section-header">
 
 <div class="eyebrow">
-Notre univers
+NOTRE UNIVERS
 </div>
 
 <h2 class="section-title">
+
 L'ambiance
 <span>LUX SPA</span>
+
 </h2>
 
 <div class="gold-line"></div>
@@ -1962,35 +1996,45 @@ L'ambiance
 
 <div class="gallery-item">
 
-<img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=90">
+<img
+src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1300&q=90"
+alt="Ambiance massage LUX SPA">
 
 </div>
 
 
 <div class="gallery-item">
 
-<img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=90">
+<img
+src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=90"
+alt="Ambiance spa">
 
 </div>
 
 
 <div class="gallery-item">
 
-<img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=90">
+<img
+src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=90"
+alt="Soin du visage">
 
 </div>
 
 
 <div class="gallery-item">
 
-<img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=900&q=90">
+<img
+src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=900&q=90"
+alt="Soin du corps">
 
 </div>
 
 
 <div class="gallery-item">
 
-<img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=90">
+<img
+src="https://images.unsplash.com/photo-1519014816548-bf5f4d8a4a4e?auto=format&fit=crop&w=900&q=90"
+alt="Pédicure">
 
 </div>
 
@@ -2003,7 +2047,7 @@ L'ambiance
 
 
 <!-- =====================================================
-CARTE CADEAU
+     CARTE CADEAU
 ===================================================== -->
 
 <section class="gift" id="cadeau">
@@ -2011,12 +2055,12 @@ CARTE CADEAU
 <div class="container">
 
 <div class="eyebrow">
-Une attention précieuse
+UNE ATTENTION PRÉCIEUSE
 </div>
 
 <h2>
 
-Offrez l'expérience
+Offrez un moment
 <br>
 
 <span>
@@ -2045,7 +2089,10 @@ Demander une carte cadeau
 
 </a>
 
-<p style="margin-top:35px;color:#c9a45d;">
+<p style="
+margin-top:30px;
+color:var(--gold-light);
+">
 
 CARTE DE FIDÉLITÉ DISPONIBLE
 
@@ -2057,21 +2104,23 @@ CARTE DE FIDÉLITÉ DISPONIBLE
 
 
 <!-- =====================================================
-RESERVATION
+     RESERVATION
 ===================================================== -->
 
-<section id="reservation">
+<section class="reservation" id="reservation">
 
-<div class="container booking">
+<div class="container">
+
+<div class="booking">
 
 
-<div class="contact" id="contact">
+<div>
 
 <div class="eyebrow">
-Votre moment commence ici
+RÉSERVATION
 </div>
 
-<h2>
+<h2 class="contact-title">
 
 Réservez
 <br>
@@ -2082,12 +2131,17 @@ votre moment.
 
 </h2>
 
-<div class="gold-line" style="margin-left:0"></div>
+<div
+class="gold-line"
+style="margin-left:0">
+</div>
 
-<p>
+<p class="contact-text">
 
 Envoyez votre demande de réservation.
-Notre équipe vous répondra directement sur WhatsApp.
+Pour découvrir notre carte complète ou demander
+une prestation particulière, contactez-nous
+directement sur WhatsApp.
 
 </p>
 
@@ -2095,23 +2149,10 @@ Notre équipe vous répondra directement sur WhatsApp.
 <div class="contact-details">
 
 
-<div class="detail">
+<div class="contact-detail">
 
 <strong>
-ADRESSE
-</strong>
-
-<span>
-Riviera Palmeraie, Abidjan
-</span>
-
-</div>
-
-
-<div class="detail">
-
-<strong>
-TÉLÉPHONE / WHATSAPP
+WHATSAPP
 </strong>
 
 <span>
@@ -2121,7 +2162,7 @@ TÉLÉPHONE / WHATSAPP
 </div>
 
 
-<div class="detail">
+<div class="contact-detail">
 
 <strong>
 HORAIRES
@@ -2134,7 +2175,7 @@ Tous les jours · 9h00 — 23h00
 </div>
 
 
-<div class="detail">
+<div class="contact-detail">
 
 <strong>
 FACEBOOK
@@ -2151,6 +2192,8 @@ LUX SPA
 
 </div>
 
+
+<!-- FORMULAIRE -->
 
 <form onsubmit="sendWhatsApp(event)">
 
@@ -2189,11 +2232,22 @@ placeholder="WhatsApp"
 <select
 id="prestation"
 class="full"
-required
->
+required>
 
 <option value="">
 Prestation souhaitée
+</option>
+
+<option>
+Pédicure + Wax complet — 10 000 FCFA
+</option>
+
+<option>
+Soin du visage — 10 000 FCFA
+</option>
+
+<option>
+Soin du corps — 10 000 FCFA
 </option>
 
 <option>
@@ -2218,18 +2272,6 @@ Massage éclaircissant — 25 000 FCFA
 
 <option>
 Massage hydratant — 25 000 FCFA
-</option>
-
-<option>
-Soin du visage — 10 000 FCFA
-</option>
-
-<option>
-Soin du corps — 10 000 FCFA
-</option>
-
-<option>
-Pédicure + Wax complet — 10 000 FCFA
 </option>
 
 <option>
@@ -2274,11 +2316,13 @@ Envoyer ma demande
 
 </div>
 
+</div>
+
 </section>
 
 
 <!-- =====================================================
-FOOTER
+     FOOTER
 ===================================================== -->
 
 <footer>
@@ -2290,110 +2334,132 @@ FOOTER
 LUX SPA
 </div>
 
-<p>
-Votre détente, notre signature.
+<p class="footer-text">
+
+Votre détente, notre signature.<br>
+
+Spa & institut de massage détente.
+
 </p>
 
 </div>
 
 
-<p>
+<div>
 
-Riviera Palmeraie · Abidjan<br>
+<p class="footer-text">
 
-+225 07 09 33 45 42<br>
-
-Tous les jours · 9h00 — 23h00
+Tous les jours<br>
+9h00 — 23h00<br>
++225 07 09 33 45 42
 
 </p>
 
+</div>
 
-<p>
-© 2026 LUX SPA · Tous droits réservés
-</p>
+
+<div class="footer-address">
+
+<strong>
+NOUS TROUVER
+</strong>
+
+Riviera Palmeraie,<br>
+
+rue i167,386<br>
+
+(Maci Canada)
+
+</div>
 
 
 </footer>
 
 
-<!-- WHATSAPP -->
+<!-- =====================================================
+     WHATSAPP
+===================================================== -->
 
 <a
-class="whatsapp"
 href="https://wa.me/2250709334542"
-target="_blank">
+target="_blank"
+class="whatsapp">
 
 WhatsApp · Réserver
 
 </a>
 
 
+<!-- =====================================================
+     WHATSAPP FORM
+===================================================== -->
+
 <script>
 
 function sendWhatsApp(event){
 
-event.preventDefault();
+    event.preventDefault();
 
-const nom =
-document.getElementById("nom").value;
+    const nom =
+    document.getElementById("nom").value;
 
-const prenom =
-document.getElementById("prenom").value;
+    const prenom =
+    document.getElementById("prenom").value;
 
-const telephone =
-document.getElementById("telephone").value;
+    const telephone =
+    document.getElementById("telephone").value;
 
-const whatsapp =
-document.getElementById("whatsapp").value;
+    const whatsapp =
+    document.getElementById("whatsapp").value;
 
-const prestation =
-document.getElementById("prestation").value;
+    const prestation =
+    document.getElementById("prestation").value;
 
-const date =
-document.getElementById("date").value;
+    const date =
+    document.getElementById("date").value;
 
-const message =
-document.getElementById("message").value;
-
-
-const texte =
-
-"Bonjour LUX SPA,%0A%0A" +
-
-"Je souhaite faire une demande de réservation.%0A%0A" +
-
-"Nom : " +
-encodeURIComponent(nom) +
-"%0A" +
-
-"Prénom : " +
-encodeURIComponent(prenom) +
-"%0A" +
-
-"Téléphone : " +
-encodeURIComponent(telephone) +
-"%0A" +
-
-"WhatsApp : " +
-encodeURIComponent(whatsapp) +
-"%0A" +
-
-"Prestation : " +
-encodeURIComponent(prestation) +
-"%0A" +
-
-"Date souhaitée : " +
-encodeURIComponent(date) +
-"%0A" +
-
-"Message : " +
-encodeURIComponent(message);
+    const message =
+    document.getElementById("message").value;
 
 
-window.open(
-"https://wa.me/2250709334542?text=" + texte,
-"_blank"
-);
+    const texte =
+
+    "Bonjour LUX SPA,%0A%0A" +
+
+    "Je souhaite faire une demande de réservation.%0A%0A" +
+
+    "Nom : " +
+    encodeURIComponent(nom) +
+    "%0A" +
+
+    "Prénom : " +
+    encodeURIComponent(prenom) +
+    "%0A" +
+
+    "Téléphone : " +
+    encodeURIComponent(telephone) +
+    "%0A" +
+
+    "WhatsApp : " +
+    encodeURIComponent(whatsapp) +
+    "%0A" +
+
+    "Prestation : " +
+    encodeURIComponent(prestation) +
+    "%0A" +
+
+    "Date souhaitée : " +
+    encodeURIComponent(date) +
+    "%0A" +
+
+    "Message : " +
+    encodeURIComponent(message);
+
+
+    window.open(
+        "https://wa.me/2250709334542?text=" + texte,
+        "_blank"
+    );
 
 }
 

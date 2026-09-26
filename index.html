@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="LUX SPA — Votre détente, notre signature. Spa haut de gamme à Riviera Palmeraie, Abidjan.">
+
+<title>LUX SPA — Votre détente, notre signature</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--black:#050505;
+--dark:#0b0907;
+--gold:#c9a45b;
+--gold-light:#f0d898;
+--cream:#f5efe3;
+--muted:#b9b0a2;
+--line:rgba(201,164,91,.35);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--black);
+color:var(--cream);
+font-family:Manrope,Arial,sans-serif;
+line-height:1.7;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.container{
+width:min(1180px,90%);
+margin:auto;
+}
+
+.serif{
+font-family:"Cormorant Garamond",serif;
+}
+
+.gold{
+color:var(--gold-light);
+}
+
+/* NAVIGATION */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:100;
+height:80px;
+padding:0 5%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:rgba(5,5,5,.72);
+backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(201,164,91,.12);
+}
+
+.logo{
+font-family:"Cormorant Garamond",serif;
+font-size:30px;
+letter-spacing:7px;
+color:var(--gold-light);
+}
+
+.navlinks{
+display:flex;
+gap:28px;
+font-size:10px;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+.navlinks a{
+transition:.3s;
+}
+
+.navlinks a:hover{
+color:var(--gold-light);
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+position:relative;
+overflow:hidden;
+
+background:
+radial-gradient(circle at 80% 35%,rgba(201,164,91,.20),transparent 28%),
+linear-gradient(115deg,#020202 0%,#100d09 55%,#030303 100%);
+}
+
+.hero:before{
+content:"";
+position:absolute;
+inset:0;
+
+background:
+linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.15)),
+radial-gradient(circle at 70% 50%,rgba(240,216,152,.08),transparent 35%);
+}
+
+.hero:after{
+content:"";
+position:absolute;
+width:700px;
+height:700px;
+right:-300px;
+top:10%;
+border:1px solid rgba(201,164,91,.12);
+border-radius:50%;
+box-shadow:0 0 100px rgba(201,164,91,.05);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+padding-top:70px;
+}
+
+.kicker{
+font-size:10px;
+letter-spacing:5px;
+text-transform:uppercase;
+color:var(--gold-light);
+margin-bottom:25px;
+}
+
+.hero h1{
+font-family:"Cormorant Garamond",serif;
+font-size:clamp(80px,13vw,170px);
+line-height:.72;
+font-weight:500;
+letter-spacing:6px;
+}
+
+.hero h2{
+font-family:"Cormorant Garamond",serif;
+font-size:clamp(32px,4vw,58px);
+font-weight:400;
+margin-top:45px;
+}
+
+.hero p{
+max-width:520px;
+color:#c8c0b3;
+font-size:14px;
+margin-top:15px;
+}
+
+.actions{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+margin-top:38px;
+}
+
+.btn{
+display:inline-block;
+padding:16px 28px;
+border:1px solid var(--gold);
+font-size:10px;
+letter-spacing:2px;
+text-transform:uppercase;
+transition:.35s;
+cursor:pointer;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 15px 40px rgba(201,164,91,.18);
+}
+
+.btn-gold{
+background:linear-gradient(135deg,#a77d32,#f1d99a,#b38a3c);
+color:#080706;
+border:none;
+}
+
+/* SECTIONS */
+
+section{
+padding:120px 0;
+}
+
+.eyebrow{
+font-size:10px;
+letter-spacing:4px;
+text-transform:uppercase;
+color:var(--gold-light);
+}
+
+.section-title{
+font-family:"Cormorant Garamond",serif;
+font-size:clamp(48px,7vw,82px);
+font-weight:500;
+line-height:.95;
+margin-top:12px;
+}
+
+.gold-line{
+width:90px;
+height:1px;
+background:linear-gradient(90deg,var(--gold),transparent);
+margin:32px 0;
+}
+
+/* INTRO */
+
+.intro{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+align-items:center;
+}
+
+.intro p{
+max-width:570px;
+color:var(--muted);
+font-size:14px;
+}
+
+.luxury-panel{
+height:440px;
+border:1px solid var(--line);
+
+background:
+radial-gradient(circle at center,rgba(201,164,91,.15),transparent 35%),
+linear-gradient(145deg,#17120c,#050505);
+
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+overflow:hidden;
+}
+
+.luxury-panel:before{
+content:"LUX";
+font-family:"Cormorant Garamond",serif;
+font-size:250px;
+color:rgba(201,164,91,.045);
+position:absolute;
+}
+
+.luxury-panel span{
+position:relative;
+z-index:2;
+letter-spacing:7px;
+font-size:11px;
+color:var(--gold-light);
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+border:1px solid var(--line);
+background:var(--line);
+gap:1px;
+margin-top:55px;
+}
+
+.service{
+background:#060606;
+padding:42px;
+min-height:250px;
+transition:.4s;
+}
+
+.service:hover{
+background:#100d09;
+}
+
+.number{
+font-family:"Cormorant Garamond",serif;
+font-size:20px;
+color:var(--gold);
+}
+
+.service h3{
+font-family:"Cormorant Garamond",serif;
+font-size:36px;
+font-weight:500;
+margin-top:10px;
+}
+
+.price{
+font-family:"Cormorant Garamond",serif;
+font-size:29px;
+color:var(--gold-light);
+}
+
+.service p{
+color:#aaa296;
+font-size:13px;
+margin:12px 0 20px;
+max-width:500px;
+}
+
+.reserve-link{
+font-size:10px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:var(--gold-light);
+}
+
+/* PACKS */
+
+.packs-section{
+background:
+radial-gradient(circle at center,rgba(201,164,91,.07),transparent 40%),
+#080706;
+}
+
+.packs{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+margin-top:55px;
+}
+
+.pack{
+padding:55px;
+border:1px solid var(--line);
+background:linear-gradient(145deg,#13100c,#060606);
+}
+
+.pack.featured{
+border-color:rgba(240,216,152,.75);
+box-shadow:inset 0 0 100px rgba(201,164,91,.04);
+}
+
+.pack-label{
+font-size:9px;
+letter-spacing:4px;
+color:var(--gold-light);
+}
+
+.pack h3{
+font-family:"Cormorant Garamond",serif;
+font-size:50px;
+font-weight:500;
+margin:12px 0;
+}
+
+.pack ul{
+list-style:none;
+margin:25px 0;
+color:#c3bbaf;
+}
+
+.pack li{
+padding:8px 0;
+border-bottom:1px solid rgba(255,255,255,.07);
+}
+
+/* CTA */
+
+.cta{
+text-align:center;
+padding:150px 5%;
+
+background:
+radial-gradient(circle at center,rgba(201,164,91,.17),transparent 45%),
+#070605;
+}
+
+.cta h2{
+font-family:"Cormorant Garamond",serif;
+font-size:clamp(55px,9vw,110px);
+font-weight:500;
+line-height:.83;
+}
+
+.cta p{
+max-width:550px;
+margin:30px auto;
+color:var(--muted);
+}
+
+/* BOOKING */
+
+.booking{
+display:grid;
+grid-template-columns:.8fr 1.2fr;
+gap:80px;
+}
+
+.contact-info{
+margin-top:30px;
+color:#bbb2a5;
+}
+
+.contact-info div{
+margin:15px 0;
+}
+
+.contact-info strong{
+color:var(--gold-light);
+font-weight:500;
+font-size:11px;
+letter-spacing:1px;
+}
+
+form{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+input,
+select,
+textarea{
+width:100%;
+background:#0c0b09;
+border:1px solid rgba(201,164,91,.28);
+color:white;
+padding:16px;
+font-family:Manrope,sans-serif;
+outline:none;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+border-color:var(--gold);
+}
+
+textarea{
+min-height:140px;
+resize:vertical;
+grid-column:1/-1;
+}
+
+.full{
+grid-column:1/-1;
+}
+
+button{
+font-family:Manrope,sans-serif;
+}
+
+/* FOOTER */
+
+footer{
+padding:55px 5%;
+border-top:1px solid var(--line);
+
+display:flex;
+justify-content:space-between;
+gap:25px;
+flex-wrap:wrap;
+}
+
+footer p{
+font-size:12px;
+color:#8f887d;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+right:22px;
+bottom:22px;
+z-index:200;
+
+background:linear-gradient(135deg,#b58a3b,#f0d898);
+color:#111;
+
+padding:15px 20px;
+
+font-size:10px;
+letter-spacing:1.5px;
+text-transform:uppercase;
+
+box-shadow:0 12px 40px rgba(0,0,0,.5);
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+nav{
+height:70px;
+}
+
+.navlinks{
+display:none;
+}
+
+.hero{
+min-height:95vh;
+}
+
+.hero h1{
+font-size:75px;
+}
+
+.hero h2{
+font-size:36px;
+margin-top:35px;
+}
+
+.intro,
+.booking,
+.packs{
+grid-template-columns:1fr;
+}
+
+.services{
+grid-template-columns:1fr;
+}
+
+section{
+padding:85px 0;
+}
+
+.luxury-panel{
+height:300px;
+}
+
+.service{
+padding:32px 25px;
+}
+
+.pack{
+padding:35px 27px;
+}
+
+form{
+grid-template-columns:1fr;
+}
+
+.full{
+grid-column:1;
+}
+
+.whatsapp{
+right:12px;
+bottom:12px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<a class="logo" href="#">
+LUX SPA
+</a>
+
+<div class="navlinks">
+
+<a href="#experience">
+L'expérience
+</a>
+
+<a href="#soins">
+Soins
+</a>
+
+<a href="#packs">
+Rituels
+</a>
+
+<a href="#cadeau">
+Carte cadeau
+</a>
+
+<a href="#reservation">
+Réservation
+</a>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="container hero-content">
+
+<div class="kicker">
+Riviera Palmeraie · Abidjan
+</div>
+
+<h1>
+LUX<br>
+<span class="gold">SPA</span>
+</h1>
+
+<h2>
+Votre détente, notre signature.
+</h2>
+
+<p>
+Une parenthèse de beauté, de détente et de bien-être
+dans un univers pensé pour vous offrir une véritable
+expérience LUX.
+</p>
+
+<div class="actions">
+
+<a class="btn btn-gold" href="#reservation">
+Réserver mon expérience
+</a>
+
+<a
+class="btn"
+href="https://wa.me/2250709334542"
+target="_blank">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+<div class="container intro">
+
+<div>
+
+<div class="eyebrow">
+L'expérience LUX SPA
+</div>
+
+<h2 class="section-title">
+
+L'art du<br>
+
+<span class="gold">
+bien-être.
+</span>
+
+</h2>
+
+<div class="gold-line"></div>
+
+<p>
+
+Bienvenue chez LUX SPA, votre destination beauté et
+bien-être à Riviera Palmeraie.
+
+Découvrez un univers élégant et chaleureux où chaque
+soin devient une invitation à ralentir, prendre soin de soi
+et profiter pleinement du moment.
+
+</p>
+
+</div>
+
+<div class="luxury-panel">
+
+<span>
+THE LUXURY EXPERIENCE
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MASSAGES -->
+
+<section id="soins">
+
+<div class="container">
+
+<div class="eyebrow">
+La carte des soins
+</div>
+
+<h2 class="section-title">
+
+Massages
+<span class="gold">
+Signature
+</span>
+
+</h2>
+
+
+<div class="services">
+
+
+<div class="service">
+
+<div class="number">
+01
+</div>
+
+<h3>
+Massage relaxant
+</h3>
+
+<div class="price">
+15 000 FCFA
+</div>
+
+<p>
+Une expérience dédiée à la relaxation et au lâcher-prise,
+dans une atmosphère calme et enveloppante.
+</p>
+
+<a class="reserve-link" href="#reservation">
+Réserver →
+</a>
+
+</div>
+
+
+<div class="service">
+
+<div class="number">
+02
+</div>
+
+<h3>
+Massage tonifiant
+</h3>
+
+<div class="price">
+25 000 FCFA
+</div>
+
+<p>
+Une expérience orientée vers une sensation de dynamisme
+et de revitalisation.
+</p>
+
+<a class="reserve-link" href="#reservation">
+Réserver →
+</a>
+
+</div>
+
+
+<div class="service">
+
+<div class="number">
+03
+</div>
+
+<h3>
+Serviette chaude
+</h3>
+
+<div class="price">
+25 000 FCFA
+</div>
+
+<p>
+Une expérience chaleureuse et enveloppante associant
+massage et sensation de chaleur.
+</p>
+
+<a class="reserve-link" href="#reservation">
+Réserver →
+</a>
+
+</div>
+
+
+<div class="service">
+
+<div class="number">
+04
+</div>
+
+<h3>
+Pierres chaudes
+</h3>
+
+<div class="price">
+25 000 FCFA
+</div>
+
+<p>
+Une expérience sensorielle associant massage et chaleur
+pour un moment de détente.
+</p>
+
+<a class="reserve-link" href="#reservation">
+Réserver →
+</a>
+
+</div>
+
+
+<div class="service">
+
+<div class="number">
+05
+</div>
+
+<h3>
+Massage éclaircissant
+</h3>
+
+<div class="price">
+25 000 FCFA
+</div>
+
+<p>
+Un soin beauté et bien-être pensé autour de la mise en
+valeur de l'apparence et du confort de la peau.
+</p>
+
+<a class="reserve-link" href="#reservation">
+Réserver →
+</a>
+
+</div>
+
+
+<div class="service">
+
+<div class="number">
+06
+</div>
+
+<h3>
+Massage hydratant
+</h3>
+
+<div class="price">
+25 000 FCFA
+</div>
+
+<p>
+Un moment de douceur destiné à apporter une sensation
+de confort et de souplesse à la peau.
+</p>
+
+<a class="reserve-link" href="#reservation">
+Réserver →
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BEAUTY -->
+
+<section>
+
+<div class="container">
+
+<div class="eyebrow">
+Beauté & soin
+</div>
+
+<h2 class="section-title">
+
+Rituels
+<span class="gold">
+Beauté
+</span>
+
+</h2>
+
+
+<div class="services">
+
+
+<div class="service">
+
+<div class="number">
+01
+</div>
+
+<h3>
+Soin du visage
+</h3>
+
+<div class="price">
+10 000 FCFA
+</div>
+
+<p>
+Un moment consacré à la beauté et au bien-être du visage.
+</p>
+
+<a class="reserve-link" href="#reservation">
+Réserver →
+</a>
+
+</div>
+
+
+<div class="service">
+
+<div class="number">
+02
+</div>
+
+<h3>
+Soin du corps
+</h3>
+
+<div class="price">
+10 000 FCFA
+</div>
+
+<p>
+Une parenthèse dédiée au soin et au confort du corps.
+</p>
+
+<a class="reserve-link" href="#reservation">
+Réserver →
+</a>
+
+</div>
+
+
+<div class="service">
+
+<div class="number">
+03
+</div>
+
+<h3>
+Pédicure + Wax complet
+</h3>
+
+<div class="price">
+10 000 FCFA
+</div>
+
+<p>
+Une prestation beauté pensée pour prendre soin de vous.
+</p>
+
+<a class="reserve-link" href="#reservation">
+Réserver →
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PACKS -->
+
+<section id="packs" class="packs-section">
+
+<div class="container">
+
+<div class="eyebrow">
+Expériences signature
+</div>
+
+<h2 class="section-title">
+
+Les rituels
+<span class="gold">
+LUX
+</span>
+
+</h2>
+
+
+<div class="packs">
+
+
+<div class="pack">
+
+<div class="pack-label">
+ESSENTIEL
+</div>
+
+<h3>
+Pack Soin Simple
+</h3>
+
+<div class="price">
+20 000 FCFA
+</div>
+
+<ul>
+
+<li>
+✓ Soin du visage
+</li>
+
+<li>
+✓ Soin du corps
+</li>
+
+<li>
+✓ Pédicure
+</li>
+
+<li>
+✓ Massage relaxant
+</li>
+
+</ul>
+
+<a class="btn" href="#reservation">
+Choisir ce pack
+</a>
+
+</div>
+
+
+<div class="pack featured">
+
+<div class="pack-label">
+EXPÉRIENCE SIGNATURE
+</div>
+
+<h3>
+Pack Soin Caviar
+</h3>
+
+<div class="price">
+40 000 FCFA
+</div>
+
+<ul>
+
+<li>
+✓ Soin du visage
+</li>
+
+<li>
+✓ Soin du corps
+</li>
+
+<li>
+✓ Pédicure complète
+</li>
+
+<li>
+✓ Soin intégral
+</li>
+
+<li>
+✓ Massage au choix
+</li>
+
+</ul>
+
+<a class="btn btn-gold" href="#reservation">
+Choisir ce pack
+</a>
+
+</div>
+
+
+</div>
+
+
+<p style="text-align:center;margin-top:45px;color:#aaa294;">
+
+D'autres prestations sont disponibles sur demande.
+
+<a
+class="gold"
+href="https://wa.me/2250709334542"
+target="_blank">
+
+Écrivez-nous sur WhatsApp.
+
+</a>
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- GIFT -->
+
+<section id="cadeau" class="cta">
+
+<div class="eyebrow">
+Une attention précieuse
+</div>
+
+<h2>
+
+Offrez l'expérience<br>
+
+<span class="gold">
+LUX SPA.
+</span>
+
+</h2>
+
+<p>
+
+Carte cadeau disponible.
+
+Faites plaisir avec un moment
+de beauté, de détente et de bien-être.
+
+</p>
+
+<a
+class="btn btn-gold"
+href="https://wa.me/2250709334542"
+target="_blank">
+
+Demander une carte cadeau
+
+</a>
+
+
+<p style="margin-top:45px;">
+
+<span class="gold">
+CARTE DE FIDÉLITÉ DISPONIBLE
+</span>
+
+<br>
+
+Profitez d'avantages réservés à nos clientes fidèles.
+
+</p>
+
+</section>
+
+
+<!-- RESERVATION -->
+
+<section id="reservation">
+
+<div class="container booking">
+
+
+<div>
+
+<div class="eyebrow">
+Votre moment commence ici
+</div>
+
+<h2 class="section-title">
+
+Réservez<br>
+
+<span class="gold">
+votre moment.
+</span>
+
+</h2>
+
+<div class="gold-line"></div>
+
+<p style="color:#aaa294;">
+
+Envoyez votre demande de rendez-vous.
+
+Pour découvrir notre carte complète ou poser une question,
+contactez-nous directement sur WhatsApp.
+
+</p>
+
+
+<div class="contact-info">
+
+
+<div>
+
+<strong>
+ADRESSE
+</strong>
+
+<br>
+
+Riviera Palmeraie, Abidjan
+
+</div>
+
+
+<div>
+
+<strong>
+TÉLÉPHONE / WHATSAPP
+</strong>
+
+<br>
+
++225 07 09 33 45 42
+
+</div>
+
+
+<div>
+
+<strong>
+HORAIRES
+</strong>
+
+<br>
+
+Tous les jours · 9h00 — 23h00
+
+</div>
+
+
+<div>
+
+<strong>
+FACEBOOK
+</strong>
+
+<br>
+
+LUX SPA
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- FORMULAIRE -->
+
+<form onsubmit="sendWhatsApp(event)">
+
+
+<input
+id="nom"
+placeholder="Nom"
+required
+>
+
+
+<input
+id="prenom"
+placeholder="Prénom"
+required
+>
+
+
+<input
+id="telephone"
+placeholder="Téléphone"
+required
+>
+
+
+<input
+id="whatsapp"
+placeholder="WhatsApp"
+>
+
+
+<select
+id="prestation"
+class="full"
+required
+>
+
+<option value="">
+Prestation souhaitée
+</option>
+
+<option>
+Massage relaxant — 15 000 FCFA
+</option>
+
+<option>
+Massage tonifiant — 25 000 FCFA
+</option>
+
+<option>
+Massage avec serviette chaude — 25 000 FCFA
+</option>
+
+<option>
+Massage aux pierres chaudes — 25 000 FCFA
+</option>
+
+<option>
+Massage éclaircissant — 25 000 FCFA
+</option>
+
+<option>
+Massage hydratant — 25 000 FCFA
+</option>
+
+<option>
+Soin du visage — 10 000 FCFA
+</option>
+
+<option>
+Soin du corps — 10 000 FCFA
+</option>
+
+<option>
+Pédicure + Wax complet — 10 000 FCFA
+</option>
+
+<option>
+Pack Soin Simple — 20 000 FCFA
+</option>
+
+<option>
+Pack Soin Caviar — 40 000 FCFA
+</option>
+
+<option>
+Autre prestation
+</option>
+
+</select>
+
+
+<input
+id="date"
+type="date"
+class="full"
+required
+>
+
+
+<textarea
+id="message"
+placeholder="Message / demande particulière">
+</textarea>
+
+
+<button
+class="btn btn-gold full"
+type="submit">
+
+Envoyer ma demande
+
+</button>
+
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+
+<div>
+
+<div class="logo">
+LUX SPA
+</div>
+
+<p>
+Votre détente, notre signature.
+</p>
+
+</div>
+
+
+<p>
+
+Riviera Palmeraie · Abidjan<br>
+
++225 07 09 33 45 42<br>
+
+Tous les jours · 9h00 — 23h00
+
+</p>
+
+
+<p>
+
+© 2026 LUX SPA · Tous droits réservés
+
+</p>
+
+
+</footer>
+
+
+<!-- WHATSAPP FIXE -->
+
+<a
+class="whatsapp"
+href="https://wa.me/2250709334542"
+target="_blank">
+
+WhatsApp · Réserver
+
+</a>
+
+
+<script>
+
+function sendWhatsApp(event){
+
+event.preventDefault();
+
+const nom =
+document.getElementById("nom").value;
+
+const prenom =
+document.getElementById("prenom").value;
+
+const telephone =
+document.getElementById("telephone").value;
+
+const whatsapp =
+document.getElementById("whatsapp").value;
+
+const prestation =
+document.getElementById("prestation").value;
+
+const date =
+document.getElementById("date").value;
+
+const message =
+document.getElementById("message").value;
+
+
+const texte =
+
+"Bonjour LUX SPA,%0A%0A" +
+
+"Je souhaite faire une demande de réservation.%0A%0A" +
+
+"Nom : " +
+encodeURIComponent(nom) +
+"%0A" +
+
+"Prénom : " +
+encodeURIComponent(prenom) +
+"%0A" +
+
+"Téléphone : " +
+encodeURIComponent(telephone) +
+"%0A" +
+
+"WhatsApp : " +
+encodeURIComponent(whatsapp) +
+"%0A" +
+
+"Prestation : " +
+encodeURIComponent(prestation) +
+"%0A" +
+
+"Date souhaitée : " +
+encodeURIComponent(date) +
+"%0A" +
+
+"Message : " +
+encodeURIComponent(message);
+
+
+window.open(
+
+"https://wa.me/2250709334542?text=" +
+texte,
+
+"_blank"
+
+);
+
+}
+
+</script>
+
+</body>
+</html>
